@@ -1,0 +1,183 @@
+
+body {
+  min-height: 200px;
+  min-width:800px;
+  font-family:sans-serif;
+
+}
+
+
+/* HEADER */
+header {
+  width: 100%;
+  height: 200px;
+/*  background-color: black;*/
+border: 1px solid black;
+}
+
+.header-image {
+height:200px;
+width:200px;
+float:left;
+}
+
+
+
+
+header h1 {
+  min-width:600px;
+  font-size: 50px;
+  text-align: center;
+  width:80%;
+  margin: 30px 0 20px auto;
+  /*color:white;*/
+}
+
+nav {
+width:100%;
+height:30px;
+text-align: center;
+
+}
+
+nav .nav_button {
+width:20%;
+margin: 0 30px 0 15px;
+font-size: 15px;
+height:60px;
+Border-Radius: 10%;
+display:inline-block;
+}
+
+.menu-icon {
+  margin: 3px 20px 3px auto;
+  height:50px;
+  width:50px;
+  float:right;
+
+}
+/* MAIN MIDDLE*/
+
+main {
+  height:600px;
+  width: 100%;
+  clear:both;
+  border: 1px solid black;
+}
+
+main div {
+  float:left;
+}
+
+.play-screen{
+  width: 69.5%;
+  height:100%;
+  border: 1px solid black;
+}
+
+.game-messaging{
+  width: 50%;
+  margin: 15px auto 0 auto;
+  text-align: center;
+  font-size: 30px;
+}
+
+
+
+table {
+  width: 70%;
+  height: 60%;
+  margin: 60px auto 0 auto;
+
+}
+
+td {
+  height:20%;
+  width:20%;
+}
+
+.table-row1 td {
+  border-bottom:1px black solid;
+}
+
+.table-row2 td {
+  border-bottom:1px black solid;
+}
+
+.column2 {
+  border-right:1px black solid;
+  border-left:1px black solid;
+}
+
+.info-screen{
+  width: 30%;
+  height:100%;
+
+
+}
+
+.header-info {
+      display:block;
+      width: 100%;
+      height:40px;
+      text-align: center;
+      font-size:60px;
+      text-decoration: underline;
+}
+
+.player-id {
+  width:100%;
+  text-align:center;
+  font-size: 45px;
+}
+
+.x-label {
+  width:49%;
+  float:left;
+  text-decoration: underline;
+}
+
+
+.o-label {
+  width:49%;
+  float:left;
+  text-decoration: underline;
+}
+
+.player-scores {
+  width:100%;
+  text-align:center;
+  float:left;
+  font-size: 40px;
+}
+
+.x-score {
+  width:49%;
+  float:left;
+}
+
+
+.o-score {
+    width:49%;
+    float:left;
+}
+
+
+/* FOOTER  */
+footer{
+  width:100%;
+  height:40px;
+  border: 1px solid black;
+
+  text-align: center;
+}
+
+footer a{
+  width:49.7%;
+  height:100%;
+  display:block;
+  float:left;
+  margin: 0 auto;
+  border: 1px solid black;
+
+}
