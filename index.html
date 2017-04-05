@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Tic Tac Toe - Puppies vs Kitties</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags unless you know what you are doing -->
@@ -11,15 +11,191 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
-    <body class="container-fluid">
-      <h1>Example</h1>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.</p>
+
+<body class="container-fluid">
+<!-- Header Row -->
+      <header>
+        <img class="header-image col-xs-3 " src="assets/images/header.jpg" alt="header image"/>
+        <h1 class="col-xs-9 text-right page-title">Tic Tac Toe Game - Pet Edition</h1>
+
+
+
+<nav class="row">
+
+<div class="left-buttons">
+
+          <button type="button" class="btn btn-success navbar-btn" id="newGame">New Game</button>
+
+        <button type="button" class="btn btn-warning navbar-btn" id="restartGame">Restart Game</button>
+</div>
+
+
+
+<!-- // Right Button Grid -->
+
+<div class="right-buttons">
+
+        <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#signUp">Sign Up</button>
+        <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#signIn">Sign In</button>
+        <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#changePassword">Change Password</button>
+        <button type="button" class="btn btn-default navbar-btn"  name="submit" id="sign-out">Sign out</button>
+</div>
+
+</nav>
+  </header>
+      <main>
+      <div class="play-screen col-xs-12  col-md-9">
+
+      <h2 class="game-messaging" id="game-messaging">YOUR TURN!</h2>
+      <table>
+      <tr class="table-row1">
+        <td class="column1 row1 diag1"  id="board[0]"><img src="assets\images\cat-x.jpeg"/></td>
+        <td class="column2 row1"  id="board[1]"></td>
+        <td class="column3 row1 diag2"  id="board[2]"></td>
+      </tr>
+      <tr class="table-row2">
+        <td class="column1 row2" id="board[3]"></td>
+        <td class="column2 row2 diag1 diag2"  id="board[4]"></td>
+        <td class="column3 row2" id="board[5]"></td>
+      </tr>
+      <tr class="table-row3">
+        <td class="column1 row3 diag2" id="board[6]"></td>
+        <td class="column2 row3"  id="board[7]"></td>
+        <td class="column3 row3 diag1"  id="board[8]"><img src="assets\images\dog-o.jpg"/></td>
+      </tr>
+      </table>
+
+      </div>
+
+
+      <div class="info-screen col-md-3">
+
+      <h2 class="header-info">SCORE</h2>
+      <div class="player-id">
+      <h3 class="x-label">X</h3>
+      <h3 class="o-label">O</h3>
+      </div>
+      <div class="player-scores">
+      <h3 class="x-score">5</h3>
+      <h3 class="o-score">6</h3>
+      </div>
+      </div>
+      </main>
+
+
+
+        <!-- Footer with the About Me and Contact Form -->
+    <!-- SignIn Modal  <footer class="row">
+      <a class="left_footer col-xs-12 col-md-6">About Me</a>
+      <a class="right_footer col-xs-12 col-md-6">Contact Us</a>
+      </footer>
+
+-->
+
+
+
+
+
+
+
+
+        <!-- SIGN UP Modal -->
+        <div class="modal fade" id="signUp" tabindex="-1" role="dialog" aria-labelledby="signUpLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="signUpLabel">Please enter your information to sign up</h4>
+              </div>
+              <div class="modal-body">
+                <form id="signUpForm">
+                    <div class="form-group">
+                      <label for="playerName">Name</label>
+                      <input name="form[name]" type="text" class="form-control" id="signUpPlayerName" placeholder="Please enter your name.">
+                    </div>
+                    <div class="form-group">
+                      <label for="playerEmail">Email</label>
+                      <input name="form[email]" type="email" class="form-control" id="signUpPlayerEmail" placeholder="Please enter your email.">
+                    </div>
+                    <div class="form-group">
+                      <label for="playerPassword">Password</label>
+                      <input name="form[password]" type="password" class="form-control" id="signUpPlayerPassword" placeholder="Please enter your email.">
+                    </div>
+                </form>
+
+                      </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+<!-- SignIn Modal -->
+        <div class="modal fade" id="signIn" tabindex="-1" role="dialog" aria-labelledby="signInLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="signInLabel">Please enter your information to sign in</h4>
+              </div>
+              <div class="modal-body">
+                <form id="signInForm">
+                    <div class="form-group">
+                      <label for="playerEmail">Email</label>
+                      <input name="form[email]" type="email" class="form-control" id="signInPlayerEmail" placeholder="Please enter your email.">
+                    </div>
+                    <div class="form-group">
+                      <label for="playerPassword">Password</label>
+                      <input name="form[password]" type="passwordf" class="form-control" id="signInPlayerPassword" placeholder="Please enter your email.">
+                    </div>
+                </form>
+
+                      </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Sign In</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+                <!-- change PAssword Modal -->
+                <div class="modal fade" id="changePassword" tabindex="-1" role="dialog" aria-labelledby="changePasswordLabel">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="changePasswordLabel">Change your password here</h4>
+                      </div>
+                      <div class="modal-body">
+                        <form id="changePasswordForm">
+                            <div class="form-group">
+                              <label for="playerPassword">Old Password</label>
+                              <input name="form[oldPass]" type="password" class="form-control" id="oldPassword" placeholder="Please enter your email.">
+                            </div>
+                            <div class="form-group">
+                              <label for="playerPassword">New Password</label>
+                              <input name="form[newPass]" type="password" class="form-control" id="newPassword" placeholder="Please enter your email.">
+                            </div>
+                        </form>
+
+                              </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-danger">Change Password</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
     </body>
 </html>

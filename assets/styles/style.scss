@@ -1,0 +1,235 @@
+@import 'colors';
+
+
+body {
+  font-family: sans-serif;
+  min-width: 700px;
+  width: 100%;
+}
+
+//*  HEADER */
+header {
+  background-color: $header-color;
+  height: 203px;
+  min-width: 700px;
+  width: 100%;
+}
+
+.header-image {
+  height: 200px;
+  width: 200px;
+}
+
+nav {
+  background-color: $header-color;
+  border-bottom: 3px solid yellow;
+  clear: both;
+  min-width: 700px;
+  width: 100%;
+
+
+}
+
+nav button {
+  padding: 1px;
+  margin: 4px 5px;
+}
+
+.left-buttons {
+  margin-left: 15px;
+  float: left;
+}
+.right-buttons {
+  margin-right: 15px;
+  text-align: right;
+  float: right;
+}
+
+
+
+
+
+
+
+/* MAIN MIDDLE*/
+
+main {
+  height:600px;
+  width: 100%;
+  clear:both;
+  border: 1px solid black;
+}
+
+main div {
+  float:left;
+}
+
+.play-screen{
+  min-width: 700px;
+  height:100%;
+  width:70%;
+  border: 1px solid black;
+  background-color:  rgb(63,86,94)
+}
+
+@media (max-width: 1042px) {
+    .play-screen{
+      //font-size: 20px;
+      width:100%;
+    }
+
+  }
+
+
+
+.game-messaging{
+  width: 50%;
+  margin: 15px auto 0 auto;
+  text-align: center;
+  font-size: 30px;
+  color:white;
+}
+
+
+
+
+table {
+  width: 470px;
+  height: 470px;
+  margin: 60px auto 0 auto;
+
+}
+
+td {
+  height:20%;
+  width:20%;
+}
+
+td , td img {
+  height: 150px;
+  width: 150px;
+  border-radius:10%;
+}
+
+
+.table-row1 td {
+  border-bottom:5px black solid;
+}
+
+.table-row2 td {
+  border-bottom:5px black solid;
+}
+
+.column2 {
+  border-right:5px black solid;
+  border-left:5px black solid;
+}
+
+
+
+
+.info-screen{
+  width: 30%;
+  height:100px;
+}
+
+.header-info {
+      display:block;
+      width: 100%;
+      height:40px;
+      text-align: center;
+      font-size:60px;
+      text-decoration: underline;
+      margin-top: 5px;
+}
+
+.player-id {
+  width:100%;
+  text-align:center;
+  font-size: 45px;
+}
+
+
+
+.player-scores {
+  width:100%;
+  text-align:center;
+  float:left;
+  font-size: 40px;
+}
+
+@media (max-width: 1042px) {
+      .info-screen{
+        width: 100%;
+        height:100px;
+      }
+      .header-info {
+        font-size:40px;
+    }
+      .player-id {
+      font-size: 20px;
+    }
+
+    .player-scores {
+      font-size:20px;
+  }
+}
+
+
+.x-label {
+  width:49%;
+  float:left;
+  text-decoration: underline;
+  color: red;
+}
+
+
+.o-label {
+  width:49%;
+  float:left;
+  text-decoration: underline;
+
+}
+
+
+
+.x-score {
+  width:49%;
+  float:left;
+}
+
+
+.o-score {
+    width:49%;
+    float:left;
+}
+
+
+/* FOOTER  */
+
+/*
+footer{
+  width:100%;
+  height:40px;
+  border: 1px solid black;
+
+  text-align: center;
+  clear:both;
+}
+
+footer a{
+  width:49.7%;
+  height:100%;
+  display:block;
+  float:left;
+  margin: 0 auto;
+  border: 1px solid black;
+
+}
+
+*/
+
+/*
+.diag2 {
+  border: 4px solid purple;
+}*/

@@ -1,0 +1,38 @@
+@import 'colors';
+
+.page-title {
+  color: $header-text-color;
+  font-size: 30px;
+  height: 150px;
+  width: 70%;
+}
+
+@media (max-width: 828px) {
+    .page-title{
+      //font-size: 20px;
+      width:420px;
+    }
+  }
+
+
+
+
+/*
+@include media-breakpoint-up(sm) {
+.page-title {
+    font-size: 16px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+.page-title {
+    font-size: 20px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+.page-title {
+    font-size: 28px;
+  }
+}
+*/
