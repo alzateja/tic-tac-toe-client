@@ -47,22 +47,22 @@
       <main>
       <div class="play-screen col-xs-12  col-md-9">
 
-      <h2 class="game-messaging" id="game-messaging">YOUR TURN!</h2>
+      <h2 class="game-messaging" id="game-messaging">Starting a New Game! Player X begin!</h2>
       <table>
       <tr class="table-row1">
-        <td class="column1 row1 diag1"  id="board[0]"><img src="assets\images\cat-x.jpeg"/></td>
-        <td class="column2 row1"  id="board[1]"></td>
-        <td class="column3 row1 diag2"  id="board[2]"></td>
+        <td class="column1 row1 diag1"  id="board0"></td>
+        <td class="column2 row1"  id="board1"></td>
+        <td class="column3 row1 diag2"  id="board2"></td>
       </tr>
       <tr class="table-row2">
-        <td class="column1 row2" id="board[3]"></td>
-        <td class="column2 row2 diag1 diag2"  id="board[4]"></td>
-        <td class="column3 row2" id="board[5]"></td>
+        <td class="column1 row2" id="board3"></td>
+        <td class="column2 row2 diag1 diag2"  id="board4"></td>
+        <td class="column3 row2" id="board5"></td>
       </tr>
       <tr class="table-row3">
-        <td class="column1 row3 diag2" id="board[6]"></td>
-        <td class="column2 row3"  id="board[7]"></td>
-        <td class="column3 row3 diag1"  id="board[8]"><img src="assets\images\dog-o.jpg"/></td>
+        <td class="column1 row3 diag2" id="board6"></td>
+        <td class="column2 row3"  id="board7"></td>
+        <td class="column3 row3 diag1"  id="board8"></td>
       </tr>
       </table>
 
@@ -77,8 +77,8 @@
       <h3 class="o-label">O</h3>
       </div>
       <div class="player-scores">
-      <h3 class="x-score">5</h3>
-      <h3 class="o-score">6</h3>
+      <h3 class="x-score" id="x-score">0</h3>
+      <h3 class="o-score" id="o-score">0</h3>
       </div>
       </div>
       </main>
@@ -151,7 +151,7 @@
                     </div>
                     <div class="form-group">
                       <label for="playerPassword">Password</label>
-                      <input name="form[password]" type="passwordf" class="form-control" id="signInPlayerPassword" placeholder="Please enter your email.">
+                      <input name="form[password]" type="password" class="form-control" id="signInPlayerPassword" placeholder="Please enter your email.">
                     </div>
                 </form>
 
