@@ -71,14 +71,26 @@ const onPlayerAction = function (event) {
 
 //  RESTART the game
 const onRestart = function () {
-    ui.boardClear()
-    ui.onNewGame()
-    gameLogic.board = ['', '', '', '', '', '', '', '', '']
-    gameLogic.restartGame()
-    console.log(gameLogic.board)
+  ui.boardClear()
+  ui.onNewGame()
+  gameLogic.board = ['', '', '', '', '', '', '', '', '']
+  gameLogic.restartGame()
+  console.log(gameLogic.board)
+}
+
+const addHandlers = () => {
+  $('#board0').on('click', onPlayerAction)
+  $('#board1').on('click', onPlayerAction)
+  $('#board2').on('click', onPlayerAction)
+  $('#board3').on('click', onPlayerAction)
+  $('#board4').on('click', onPlayerAction)
+  $('#board5').on('click', onPlayerAction)
+  $('#board6').on('click', onPlayerAction)
+  $('#board7').on('click', onPlayerAction)
+  $('#board8').on('click', onPlayerAction)
+  $('#restartGame').on('click', onRestart)
 }
 
 module.exports = {
-  onRestart,
-  onPlayerAction
+  addHandlers
 }
