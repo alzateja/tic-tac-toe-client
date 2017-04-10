@@ -3,6 +3,7 @@
 const config = require('../config.js')
 const store = require('../store')
 
+// SIGNUP AJAX CREATES USER OBJECT___________________
 const signUp = function (data) {
   return $.ajax({
     url: config.apiOrigin + '/sign-up',
@@ -11,6 +12,7 @@ const signUp = function (data) {
   })
 }
 
+// SIGNIN AJAX CREATES  A TOKEN___________________
 const signIn = (data) => {
   console.log('signIn check')
   return $.ajax({
@@ -22,6 +24,7 @@ const signIn = (data) => {
   })
 }
 
+// SIGNOUT AJAX DELETES A TOKEN___________________
 const signOut = () => {
   console.log('signOut check')
   return $.ajax({
@@ -33,6 +36,7 @@ const signOut = () => {
   })
 }
 
+// CHANGE PASSWORD AJAX MODIFIES THE PASSWORDS OBJECT___________________
 const changePassword = (data) => {
   console.log('data is ', data)
   console.log('signIn check')

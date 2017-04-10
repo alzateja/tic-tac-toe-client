@@ -4,12 +4,7 @@ const authApi = require('./api')
 const authUi = require('./ui')
 const getFormFields = require('../../../lib/get-form-fields')
 
-// get in the habit of naming your handlers, it eases debugging.
-//
-// also, follow a convention for handlers. here, I name my handler
-// beginning with 'on' to denote that it is done when the GET /books
-// button is clicked
-
+// SIGNUP FUNCTIONALITY LAUNCHED WHEN CLICKED IN MODAL___________________
 const onSignUp = function (event) {
   event.preventDefault()
   const data = getFormFields(this)
@@ -32,6 +27,7 @@ const onSignUp = function (event) {
   .catch(authUi.signUpFailure)
 }
 
+// SIGNIN FUNTIONALITY LAUNCHED WHEN CLICKED IN MODAL___________________
 const onSignIn = function (event) {
   event.preventDefault()
 
@@ -42,6 +38,7 @@ const onSignIn = function (event) {
     .catch(authUi.signInFailure)
 }
 
+// SIGNOUT FUNCTION EXECUTED WHEN BUTTON CLICKED___________________
 const onSignOut = function (event) {
   event.preventDefault()
   console.log('Sign out run')
@@ -54,6 +51,7 @@ const onSignOut = function (event) {
     .catch(authUi.signOutFailure)
 }
 
+// CHANGE PASSWORD FUNTIONALITY LAUNCHED WHEN CLICKED IN MODAL___________________
 const onChangePassword = function (event) {
   event.preventDefault()
   console.log('Changing password run')
@@ -73,6 +71,7 @@ const onChangePassword = function (event) {
     .catch(authUi.changePasswordFailure)
 }
 
+// HANDLER TO ASSIGN AUTHORIZATION FUNCTIONS TO OBJECTS___________________
 const addHandlers = () => {
   $(document).on('submit', '#signUpForm', onSignUp)
   $(document).on('submit', '#signInForm', onSignIn)

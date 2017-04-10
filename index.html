@@ -26,8 +26,23 @@
 <div class="left-buttons">
 
           <button type="button" class="btn btn-success navbar-btn" id="newGame">New Game</button>
+          <button type="button" class="btn btn-success navbar-btn" id="updateStats">Update Stats</button>
 
-        <button type="button" class="btn btn-warning navbar-btn" id="restartGame">Restart Game</button>
+<div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="ai-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    AI Off
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="AIMenu">
+    <li><a id="dumb-ai">Dumb AI On</a></li>
+    <li><a id="smart-ai">Smart AI On</a></li>
+    <li><a id="smartest-ai">Smartest AI On</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a id="ai-off">AI Off</a></li>
+  </ul>
+</div>
+
+
 </div>
 
 
@@ -36,9 +51,9 @@
 
 <div class="right-buttons">
 
-        <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#signUpForm">Sign Up</button>
-        <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#signInForm">Sign In</button>
-        <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#changePasswordForm">Change Password</button>
+        <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#signUpForm" id="signupbut">Sign Up</button>
+        <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#signInForm" id="signinbut">Sign In</button>
+        <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#changePasswordForm" id="change-pass-but">Change Password</button>
         <button type="submit" class="btn btn-default navbar-btn"  name="submit" id="sign-out">Sign out</button>
 </div>
 
@@ -48,7 +63,7 @@
       <div class="play-screen col-xs-12  col-md-9">
 
       <h2 class="game-messaging" id="game-messaging">Starting a New Game! Player X begin!</h2>
-      <table>
+      <table id="game-board">
       <tr class="table-row1">
         <td class="column1 row1 diag1"  id="board0"></td>
         <td class="column2 row1"  id="board1"></td>
@@ -71,14 +86,14 @@
 
       <div class="info-screen col-md-3">
 
-      <h2 class="header-info">SCORE</h2>
-      <div class="player-id">
-      <h3 class="x-label">X</h3>
-      <h3 class="o-label">O</h3>
-      </div>
-      <div class="player-scores">
-      <h3 class="x-score" id="x-score">0</h3>
-      <h3 class="o-score" id="o-score">0</h3>
+      <h2 class="Player Stats">SCORE</h2>
+      <div class="info">
+      <h3 id='games-total'>Total Games: </h3>
+      <h3 id='games-win'>Wins: </h3>
+      <h3 id='games-loss'>Losses: </h3>
+      <h3 id='games-ties'>Ties: </h3>
+      <h3 id='games-abandoned'>Abandoned: </h3>
+
       </div>
       </div>
       </main>
@@ -186,6 +201,39 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         <button type="submit" class="btn btn-danger" id="changepasswordsubmit">Change Password!</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+
+
+<!-- Stats modal -->
+<form class="modal fade" id="changePasswordForm" tabindex="-1" role="dialog" aria-labelledby="changePasswordLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="changePasswordLabel">Current User's Stats</h4>
+      </div>
+    <!--    <div id="sign-in-alert" class="alert alert-danger" role="alert">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        <span class="sr-only">Uh oh!:</span> Unable to login with this email and password
+      </div> -->
+      <div class="modal-body">
+            <div class="form-group">
+              <label for="playerOldPassword">Email</label>
+              <input name="passwords[old]" type="password" class="form-control" id="changePassOld" placeholder="Please enter your email.">
+            </div>
+            <div class="form-group">
+              <label for="playerOldPassword">New Password</label>
+              <input name="passwords[new]" type="password" class="form-control" id="changePassNew" placeholder="Please enter password.">
+            </div>
+              </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
       </div>
     </div>
   </div>
