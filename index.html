@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Tic Tac Toe - Puppies vs Kitties</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+      <!-- Do not add `link` tags unless you know what you are doing -->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags unless you know what you are doing -->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+
+     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    </head>
+
+
+<body class="container-fluid">
+<!-- Header Row -->
+
+  <div class="jumbotron">
+    <div class ="container-fluid">
+      <div class ="container-fluid">
+  <img class="header-image col-xs-3 " src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Tic_Tac_Toe.png" alt="Tic Tac Toe Grid"/>
+  <h1 class="col-xs-9 page-header"  id="page-title">Tic Tac Toe Game - Pet Edition</h1>
+
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#game-nav-bar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Options</a>
+      </div>
+
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="game-nav-bar">
+        <ul class="nav navbar-nav">
+          <li><a href="#" data-toggle="modal" data-target="#signUpForm" id="signupbut">Sign Up</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#signInForm" id="signinbut">Sign In</a></li>
+          <li><a href="#" id="updateStats">Update Stats</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#changePasswordForm" id="change-pass-but">Change Password</a></li>
+          <li><a href="#" data-toggle="modal" id="sign-out">Sign out</a></li>
+
+        </ul>
+
+        <!--  Right buttons -->
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#" id="newGame">New Game</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="ai-menu">AI Off<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a id="dumb-ai">Dumb AI On</a></li>
+              <li><a id="smart-ai">Smart AI On</a></li>
+              <li><a id="smartest-ai">Smartest AI On</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a id="ai-off">AI Off</a></li>
+            </ul>
+          </li>
+
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+
+</div>
+
+</div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <main>
+      <div class="play-screen col-xs-12  col-md-9">
+
+      <h2 class="game-messaging" id="game-messaging">Starting a New Game! Player X begin!</h2>
+
+      <table id="game-board">
+      <tr class="table-row1">
+        <td class="column1 row1 diag1"  id="board0"></td>
+        <td class="column2 row1"  id="board1"></td>
+        <td class="column3 row1 diag2"  id="board2"></td>
+      </tr>
+      <tr class="table-row2">
+        <td class="column1 row2" id="board3"></td>
+        <td class="column2 row2 diag1 diag2"  id="board4"></td>
+        <td class="column3 row2" id="board5"></td>
+      </tr>
+      <tr class="table-row3">
+        <td class="column1 row3 diag2" id="board6"></td>
+        <td class="column2 row3"  id="board7"></td>
+        <td class="column3 row3 diag1"  id="board8"></td>
+      </tr>
+      </table>
+
+
+       </div>
+
+      <div class="info-screen col-md-3">
+
+      <h2 class="Player Stats">SCORE</h2>
+      <div class="info">
+      <h3 id='games-total'>Total Games: </h3>
+      <h3 id='games-win'>Wins: </h3>
+      <h3 id='games-loss'>Losses: </h3>
+      <h3 id='games-ties'>Ties: </h3>
+      <h3 id='games-abandoned'>Abandoned: </h3>
+
+      </div>
+      </div>
+      </main>
+
+
+
+
+
+
+
+
+
+
+        <!-- SIGN UP Modal -->
+        <form class="modal fade" id="signUpForm" tabindex="-1" role="dialog" aria-labelledby="signUpLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="signUpLabel">Please enter your information to sign up</h4>
+              </div>
+              <div class="modal-body">
+                    <div class="form-group">
+                      <label for="playerEmail">Email</label>
+                      <input name="credentials[email]" type="email" class="form-control" id="signUpPlayerEmail" placeholder="Please enter your email.">
+                    </div>
+                    <div class="form-group">
+                      <label for="playerPassword">Password</label>
+                      <input name="credentials[password]" type="password" class="form-control" id="signUpPlayerPassword" placeholder="Please enter password.">
+                    </div>
+                    <div class="form-group">
+                      <label for="playerPasswordConfirm">Password</label>
+                      <input name="credentials[password_confirmation]" type="password" class="form-control" id="signUpPlayerPasswordConfirm" placeholder="Confirm Password.">
+                    </div>
+                      </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" id="signupsubmit">Submit</button>
+              </div>
+            </div>
+          </div>
+        </form>
+
+
+
+<!-- SignIn Modal -->
+<form class="modal fade" id="signInForm" tabindex="-1" role="dialog" aria-labelledby="signInLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="signInLabel">Please Sign In!</h4>
+      </div>
+      <div class="modal-body">
+            <div class="form-group">
+              <label for="playerEmail">Email</label>
+              <input name="credentials[email]" type="email" class="form-control" id="signInPlayerEmail" placeholder="Please enter your email.">
+            </div>
+            <div class="form-group">
+              <label for="playerPassword">Password</label>
+              <input name="credentials[password]" type="password" class="form-control" id="signInPlayerPassword" placeholder="Please enter password.">
+            </div>
+              </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary" id="signinsubmit">Sign In!</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+
+
+<!-- Password Modal -->
+<form class="modal fade" id="changePasswordForm" tabindex="-1" role="dialog" aria-labelledby="changePasswordLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="changePasswordLabel">Change Password here</h4>
+      </div>
+    <!--    <div id="sign-in-alert" class="alert alert-danger" role="alert">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        <span class="sr-only">Uh oh!:</span> Unable to login with this email and password
+      </div> -->
+      <div class="modal-body">
+            <div class="form-group">
+              <label for="playerOldPassword">Old Password</label>
+              <input name="passwords[old]" type="password" class="form-control" id="changePassOld" placeholder="Please enter your email.">
+            </div>
+            <div class="form-group">
+              <label for="playerOldPassword">New Password</label>
+              <input name="passwords[new]" type="password" class="form-control" id="changePassNew" placeholder="Please enter password.">
+            </div>
+              </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-danger" id="changepasswordsubmit">Change Password!</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+
+
+<!-- Stats modal -->
+<form class="modal fade" id="changePasswordForm" tabindex="-1" role="dialog" aria-labelledby="changePasswordLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="changePasswordLabel">Current User's Stats</h4>
+      </div>
+    <!--    <div id="sign-in-alert" class="alert alert-danger" role="alert">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        <span class="sr-only">Uh oh!:</span> Unable to login with this email and password
+      </div> -->
+      <div class="modal-body">
+            <div class="form-group">
+              <label for="playerOldPassword">Email</label>
+              <input name="passwords[old]" type="password" class="form-control" id="changePassOld" placeholder="Please enter your email.">
+            </div>
+            <div class="form-group">
+              <label for="playerOldPassword">New Password</label>
+              <input name="passwords[new]" type="password" class="form-control" id="changePassNew" placeholder="Please enter password.">
+            </div>
+              </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</form>
+
+
+    </body>
+</html>
