@@ -1,20 +1,22 @@
 @import 'colors';
 
-.page-title {
-  color: $header-text-color;
-  font-size: 30px;
-  height: 150px;
-  width: 70%;
+#page-title main {
+
+//  font-size: 30px;
+  //height: 150px;
+//  width: 70%;
+  font-family: 'Raleway', sans-serif;
 }
 
-@media (max-width: 828px) {
+
+/*@media (max-width: 828px) {
     .page-title{
       //font-size: 20px;
       width:420px;
     }
   }
 
-
+*/
 
 
 /*

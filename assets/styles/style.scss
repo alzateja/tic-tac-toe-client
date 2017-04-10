@@ -7,44 +7,32 @@ body {
   width: 100%;
 }
 
+
+
+
 //*  HEADER */
-header {
-  background-color: $header-color;
+/*header {
   height: 203px;
   min-width: 700px;
   width: 100%;
-}
+}*/
 
 .header-image {
-  height: 200px;
+  height: 100%;
   width: 200px;
+  margin-bottom: 20px;
+
 }
 
 nav {
-  background-color: $header-color;
-  border-bottom: 3px solid yellow;
+
+
   clear: both;
-  min-width: 700px;
-  width: 100%;
+  //min-width: 700px;
+  //width: 100%;
 
 
 }
-
-nav button {
-  padding: 1px;
-  margin: 4px 5px;
-}
-
-.left-buttons {
-  margin-left: 15px;
-  float: left;
-}
-.right-buttons {
-  margin-right: 15px;
-  text-align: right;
-  float: right;
-}
-
 
 
 
@@ -54,10 +42,10 @@ nav button {
 /* MAIN MIDDLE*/
 
 main {
-  height:600px;
-  width: 100%;
+  height:610px;
+//  width: 100%;
   clear:both;
-  border: 1px solid black;
+
 }
 
 main div {
@@ -69,8 +57,9 @@ main div {
   height:100%;
   width:70%;
   border: 1px solid black;
-  background-color:  rgb(63,86,94)
+  background-color: $play-screen-background;
 }
+
 
 @media (max-width: 1042px) {
     .play-screen{
@@ -83,7 +72,7 @@ main div {
 
 
 .game-messaging{
-  width: 50%;
+  width: 70%;
   margin: 15px auto 0 auto;
   text-align: center;
   font-size: 30px;
@@ -94,35 +83,37 @@ main div {
 
 
 table {
-  width: 470px;
-  height: 470px;
-  margin: 60px auto 0 auto;
+  width: 437px;
+  height: 437px;
+  margin: 80px auto 5px auto;
+
 
 }
 
 td {
-  height:20%;
-  width:20%;
+  height:150px;
+  width:150px;
 }
 
-td , td img {
-  height: 150px;
-  width: 150px;
+ td img {
+  height: 140px;
+  width: 140px;
   border-radius:10%;
 }
 
 
 .table-row1 td {
-  border-bottom:5px black solid;
+  border-bottom: 3px solid $gridcolor;
 }
 
 .table-row2 td {
-  border-bottom:5px black solid;
+  border-bottom: 3px solid $gridcolor;
 }
 
 .column2 {
-  border-right:5px black solid;
-  border-left:5px black solid;
+  border-left: 3px solid $gridcolor ;
+  border-right: 3px solid$gridcolor ;
+
 }
 
 
@@ -131,6 +122,9 @@ td , td img {
 .info-screen{
   width: 30%;
   height:100px;
+text-align: center;
+
+
 }
 
 .header-info {
@@ -143,93 +137,16 @@ td , td img {
       margin-top: 5px;
 }
 
-.player-id {
-  width:100%;
-  text-align:center;
-  font-size: 45px;
-}
 
-
-
-.player-scores {
-  width:100%;
-  text-align:center;
-  float:left;
-  font-size: 40px;
-}
 
 @media (max-width: 1042px) {
       .info-screen{
         width: 100%;
         height:100px;
+        text-align: center;
       }
-      .header-info {
-        font-size:40px;
-    }
-      .player-id {
-      font-size: 20px;
-    }
-
-    .player-scores {
-      font-size:20px;
-  }
 }
 
-
-.x-label {
-  width:49%;
-  float:left;
-  text-decoration: underline;
-  color: red;
+.win {
+  border: 3px solid rgba(23, 233, 86, 1);
 }
-
-
-.o-label {
-  width:49%;
-  float:left;
-  text-decoration: underline;
-
-}
-
-
-
-.x-score {
-  width:49%;
-  float:left;
-}
-
-
-.o-score {
-    width:49%;
-    float:left;
-}
-
-
-/* FOOTER  */
-
-/*
-footer{
-  width:100%;
-  height:40px;
-  border: 1px solid black;
-
-  text-align: center;
-  clear:both;
-}
-
-footer a{
-  width:49.7%;
-  height:100%;
-  display:block;
-  float:left;
-  margin: 0 auto;
-  border: 1px solid black;
-
-}
-
-*/
-
-/*
-.diag2 {
-  border: 4px solid purple;
-}*/

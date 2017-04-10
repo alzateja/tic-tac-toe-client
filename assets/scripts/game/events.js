@@ -22,7 +22,7 @@ let optimalMove = null
 // NEW GAME -  INITIALIZE THE GAME
 const newGame = function (data) {
   // Check to see if loggedin
-
+  $(winCondition).removeClass('win')
   if (jQuery.isEmptyObject(store.user)) {
     $('#game-messaging').text('Please log in to play')
     return

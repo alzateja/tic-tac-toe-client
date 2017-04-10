@@ -28,7 +28,7 @@ const boardRender = function (board) {
 }
 
 const onNewGame = function () {
-  $('#game-messaging').text('Starting a New Game! Player X begin!')
+  $('#game-messaging').text('New Game! Player X begin!')
 }
 
 // ERROR HANDLING

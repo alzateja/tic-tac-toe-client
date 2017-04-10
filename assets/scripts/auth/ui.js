@@ -33,6 +33,7 @@ const signInSuccess = (data) => {
   $('#sign-out').show()
   $('#signupbut').hide()
   $('#signinbut').hide()
+  $('#updateStats').show()
 // New report
 }
 
@@ -56,6 +57,7 @@ const signOutSuccess = (data) => {
   $('#games-abandoned').text('Abandoned:: 0')
   $('#signupbut').show()
   $('#signinbut').show()
+  $('#updateStats').hide()
 }
 
 const signOutFailure = (error) => {
