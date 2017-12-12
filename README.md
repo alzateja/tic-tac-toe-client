@@ -31,7 +31,7 @@ This is my first attempt creating a **Tic Tac Toe**, game and my first attempt a
 * I had a general plan of what order I would work on things and how I would commit them. Once I finished a branch, I would commit a branch, merge the branch back into master and then recommited changes.
 * I worked on HTML/CSS , game logic, authorization , game logic rebuild, and game API in that order.  In retrospect, I should have worked on the AJAX functions first, then game logic, followed by design.
 * I built a "dumb" AI using a random number genrator but halfway through I decided to rebuild my entire system to create a more challenging opponent. It was a large time commitment that derailed my project.
-* At the end, I tries to incorporate bootstrap elements in my front end. I believe this helped with its performance on smaller screens.
+* At the end, I tried to incorporate bootstrap elements in my front end. I believe this helped with its performance on smaller screens.
 
 ## Challenges
 * One of major challenges involved figuring out the data structure of the API and how to use the data.
@@ -53,7 +53,7 @@ Start with `grunt serve`.
 -   [Bootstrap](http://getbootstrap.com)
 -   [Handlebars.js](http://handlebarsjs.com)
 
-## Dependencies
+## Final Thoughts
 * Extremely challenging first project but I really enjoyed the process.  I learned **A LOT** about the importance in planning to help avoid headaches.  I still need a lot of work on finding a place to do incremental commits as I felt wrong about commiting without finishing a feature.
 
 ## [License](LICENSE)
