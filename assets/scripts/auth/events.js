@@ -14,6 +14,7 @@ const onSignUp = function (event) {
   console.log(data.credentials.email)
   if (data.credentials.password !== data.credentials.password_confirmation) {
     console.log('Your passwords do not match')
+    $('#sign-up-failure-alert').show()
     return
   }
 

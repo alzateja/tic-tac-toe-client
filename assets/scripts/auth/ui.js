@@ -9,6 +9,7 @@ const signUpSuccess = (data) => {
   $('#signUpPlayerPasswordConfirm').val('')
   $('#signUpPlayerPassword').val('')
   $('#signUpPlayerEmail').val('')
+  $('#sign-up-failure-alert').hide()
 }
 
 const signUpFailure = (error) => {
@@ -34,30 +35,41 @@ const signInSuccess = (data) => {
   $('#signupbut').hide()
   $('#signinbut').hide()
   $('#updateStats').show()
+  $('#sign-in-failure-alert').hide()
 // New report
 }
 
 const signInFailure = (error) => {
   console.error('signIn error ran, error is: ', error)
+  $('#sign-in-failure-alert').show()
 }
 
 //  SIGN OUT SUCCESS AND FAILURE MESSAGING ______________________
 
-const signOutSuccess = (data) => {
+const signOutSuccess = () => {
   console.log('signOut success ran, and nothing was returned')
-  store = null
+
+// Hide elements
+  console.log(store.user)
   $('#game-board').hide()
   $('#newGame').hide()
   $('#ai-menu').hide()
+  $('#updateStats').hide()
+  $('#change-pass-but').hide()
+  $('#sign-out').hide()
+  // Update the tracker information
   $('#game-messaging').text('Please log in to play')
-  $('#games-total').text('Total Games: 0')
-  $('#games-win').text('Wins: 0')
-  $('#games-loss').text('Losses 0')
-  $('#games-ties').text('Ties: 0')
-  $('#games-abandoned').text('Abandoned:: 0')
+  $('#games-total').text('Total Games: ')
+  $('#games-win').text('Wins: ')
+  $('#games-loss').text('Losses ')
+  $('#games-ties').text('Ties: ')
+  $('#games-abandoned').text('Abandoned: ')
+  // Show sign up and signin buttons
   $('#signupbut').show()
   $('#signinbut').show()
-  $('#updateStats').hide()
+
+  store = null
+  console.log(store.user)
 }
 
 const signOutFailure = (error) => {
@@ -69,10 +81,17 @@ const signOutFailure = (error) => {
 const changePasswordSuccess = (data) => {
   console.log('Password was succesfully changed')
   $('#changePasswordForm').modal('hide')
+  $('#changePassNew').val('')
+  $('#changePassOld').val('')
 }
 
 const changePasswordFailure = (error) => {
   console.log('Password was not succesfully changed', error)
+}
+
+const signInClose = function () {
+  $('#signInPlayerPassword').val('')
+  $('#signInPlayerEmail').val('')
 }
 
 module.exports = {
@@ -83,5 +102,6 @@ module.exports = {
   signOutFailure,
   signOutSuccess,
   changePasswordFailure,
-  changePasswordSuccess
+  changePasswordSuccess,
+  signInClose
 }

@@ -23,6 +23,8 @@ const hideGameOptions = function () {
   $('#sign-out').hide()
   $('#game-options-launch').hide()
   $('#updateStats').hide()
+  $('#sign-in-failure-alert').hide()
+  $('#sign-up-failure-alert').hide()
 }
 
 $(() => {
